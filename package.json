@@ -1,18 +1,16 @@
 {
   "name": "weather-api",
   "version": "1.0.0",
-  "description": "Simple CRUD API for weather data",
-  "main": "index.js",
+  "description": "Weather API using Express and MongoDB",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "watch": "nodemon --ext js index.js"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "mongoose": "^8.0.3",
     "dotenv": "^16.3.1",
-    "cors": "^2.8.5"
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"

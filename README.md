@@ -35,8 +35,20 @@ npm run dev
 
 ## API Endpoints
 
+- GET `/` - Simple status check, returns `{ status: 'OK' }`
+- GET `/api/health` - Check application status
 - GET `/api/weather` - Get all weather records
 - GET `/api/weather/:id` - Get a specific weather record
 - POST `/api/weather` - Create a new weather record
 - PUT `/api/weather/:id` - Update a weather record
 - DELETE `/api/weather/:id` - Delete a weather record
+
+## Health Check Response
+
+```json
+{
+  "uptime": 123.45,
+  "timestamp": "2025-01-15T00:16:48+01:00",
+  "status": "OK",
+  "mongoStatus": "connected"
+}
