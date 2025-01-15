@@ -35,8 +35,7 @@ npm run dev
 
 ## API Endpoints
 
-- GET `/` - Simple status check, returns `{ status: 'OK' }`
-- GET `/api/health` - Check application status
+- GET `/` - Simple status check
 - GET `/api/weather` - Get all weather records
 - GET `/api/weather/:id` - Get a specific weather record
 - POST `/api/weather` - Create a new weather record
@@ -47,8 +46,6 @@ npm run dev
 
 ```json
 {
-  "uptime": 123.45,
-  "timestamp": "2025-01-15T00:16:48+01:00",
-  "status": "OK",
-  "mongoStatus": "connected"
+  "status": "Server is runing",
+  "mongo": true
 }
