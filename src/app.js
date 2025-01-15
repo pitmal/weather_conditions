@@ -1,8 +1,15 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const weatherRoutes = require('./weather/weather.routes');
 const requestLogger = require('./middleware/requestLogger');
 const mongoose = require('mongoose');
+
+// CORS configuration
+app.use(cors({
+    origin: '*', 
+    methods: '*'  
+}));
 
 app.use(express.json());
 app.use(requestLogger);
