@@ -43,23 +43,7 @@ const service = {
         }
     },
 
-    async updateWeather(id, weatherData) {
-        try {
-            console.log(`WeatherService: Updating weather record with id: ${id}`);
-            // const weather = await Weathers.findById(id);
-            // if (!weather) return null;
-            
-            // Object.assign(weather, weatherData);
-            // return await weather.save();
-
-            const weather = await Weathers.findByIdAndUpdate(id,{$set:{...weatherData}},{new:true})
-            return weather
-            
-        } catch (error) {
-            console.error(`Error in updateWeather: ${error}`);
-            throw new Error(`Failed to update weather record: ${error.message}`);
-        }
-    },
+  
 
     async deleteWeather(id) {
         try {
